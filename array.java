@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class array {
 
 	public static void markOne() {
-		int[] array = new int[3];
+		int array[] = new int[3];
 		array[0] = 2;
 		array[1] = 1;
 		array[2] = 0;
@@ -20,7 +20,7 @@ public class array {
 	}
 
 	public static void markTwo() {
-		int[] array = new int[3];
+		int array[] = new int[3];
 
 		Scanner read = new Scanner(System.in);
 
@@ -34,7 +34,7 @@ public class array {
 	}
 
 	public static void markThree() {
-		int[] array = new int[3];
+		int array[] = new int[3];
 
 		Scanner read = new Scanner(System.in);
 
@@ -50,7 +50,7 @@ public class array {
 	}
 
 	public static void markFour() {
-		int[] array = new int[5];
+		int array[] = new int[5];
 		int soma = 0;
 		
 		Scanner read = new Scanner(System.in);
