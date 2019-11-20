@@ -52,7 +52,7 @@ public class array {
 	public static void markFour() {
 		int array[] = new int[5];
 		int soma = 0;
-		
+
 		Scanner read = new Scanner(System.in);
 
 		for (int i = 0; i <= 4; i++) {
@@ -64,10 +64,56 @@ public class array {
 
 	}
 
+	public static void markFive() {
+		int len;
+		Scanner read = new Scanner(System.in);
+
+		System.out.print("Informe o tamanho do array :: ");
+		len = read.nextInt();
+		int array[] = new int[len];
+
+		for (int i = 0; i < len; i++) {
+			System.out.print("Informe um valor do array :: ");
+			array[i] = read.nextInt();
+		}
+		for (int i = 0; i < len; i++) {
+			System.out.println("Indice :: " + i + " valor  " + array[i]);
+		}
+	}
+
+	public static void markSix() {
+		int len,lpar=0,limpar = 0;
+		Scanner read = new Scanner(System.in);
+
+		System.out.print("Informe a quantidade de valores que deseja ler :: ");
+		len = read.nextInt();
+		int array[] = new int[len];
+		
+		// 					i <= len - 1
+		for (int i = 0; i < len; i++) {
+			System.out.print("Informe o valor :: ");
+			array[i] = read.nextInt();
+			//contador de pares
+			if (array[i] % 2 == 0) {
+				lpar++;
+			}
+			//contador de impares
+			else {
+				limpar++;
+			}
+			
+		}
+		System.out.println("Quantidade de numeros pares :: " + lpar);
+		System.out.println("Quantidade de numeros impares :: " + limpar);
+
+	}
+
 	public static void main(String[] args) {
 		// markOne();
 		// markTwo();
-		//markThree();
-		//markFour();
+		// markThree();
+		// markFour();
+		//markFive();
+		markSix();
 	}
 }
