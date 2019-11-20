@@ -82,34 +82,42 @@ public class array {
 	}
 
 	public static void markSix() {
-		int len,lpar=0,limpar = 0, soma = 0, media = 0;
+		int len, lpar = 0, limpar = 0, soma = 0, media = 0, menor = 0, maior = 0;
 		Scanner read = new Scanner(System.in);
 
 		System.out.print("Informe a quantidade de valores que deseja ler :: ");
 		len = read.nextInt();
 		int array[] = new int[len];
-		
-		// 					i <= len - 1
+
+		// i <= len - 1
 		for (int i = 0; i < len; i++) {
 			System.out.print("Informe o valor :: ");
 			array[i] = read.nextInt();
 
-			//soma
+			if (i == 0) {
+				maior = array[i];
+				menor = array[i];
+			} else if (array[i] > maior) {
+				maior = array[i];
+			} else if (array[i] < menor) {
+				menor = array[i];
+			}
+			// soma
 			soma = soma + array[i];
 
-			//media
-			media = soma/len;
-			//contador de pares
+			// media
+			media = soma / len;
+			// contador de pares
 			if (array[i] % 2 == 0) {
 				lpar++;
 			}
-			//contador de impares
+			// contador de impares
 			else {
 				limpar++;
 			}
-			
+
 		}
-		
+
 		System.out.println("Valor da soma de todos os arrays ::" + soma);
 		System.out.println("Valor da média de todos os arrays ::" + media);
 		System.out.println("Quantidade de numeros pares :: " + lpar);
@@ -122,7 +130,7 @@ public class array {
 		// markTwo();
 		// markThree();
 		// markFour();
-		//markFive();
+		// markFive();
 		markSix();
 	}
 }
