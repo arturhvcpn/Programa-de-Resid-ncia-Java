@@ -82,7 +82,7 @@ public class array {
 	}
 
 	public static void markSix() {
-		int len,lpar=0,limpar = 0;
+		int len,lpar=0,limpar = 0, soma = 0, media = 0;
 		Scanner read = new Scanner(System.in);
 
 		System.out.print("Informe a quantidade de valores que deseja ler :: ");
@@ -93,6 +93,12 @@ public class array {
 		for (int i = 0; i < len; i++) {
 			System.out.print("Informe o valor :: ");
 			array[i] = read.nextInt();
+
+			//soma
+			soma = soma + array[i];
+
+			//media
+			media = soma/len;
 			//contador de pares
 			if (array[i] % 2 == 0) {
 				lpar++;
@@ -103,6 +109,9 @@ public class array {
 			}
 			
 		}
+		
+		System.out.println("Valor da soma de todos os arrays ::" + soma);
+		System.out.println("Valor da média de todos os arrays ::" + media);
 		System.out.println("Quantidade de numeros pares :: " + lpar);
 		System.out.println("Quantidade de numeros impares :: " + limpar);
 
