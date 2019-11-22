@@ -138,35 +138,35 @@ public class array {
 	}
 
 	public static void markEight() {
-		int array_one[] = new int[5], array_two[] = new int[5];
-		// par * 2; impar + 5;
-		
+		int leng = 5, array_one[] = new int[leng], array_two[] = new int[leng];
+
 		Scanner read = new Scanner(System.in);
-		
+
 		for (int i = 0; i < array_one.length; i++) {
 			System.out.print("\nInforme o valor do array :: ");
-			array_one[i] = read.nextInt();			
+			array_one[i] = read.nextInt();
 			// ||
-			if (array_one[i] % 2 == 0 ) {
+			if (array_one[i] % 2 == 0) {
 
-				array_two[i] = array_one[i] * 2;				
-			} else {				
+				array_two[i] = array_one[i] * 2;
+			} else {
 				array_two[i] = array_one[i] + 5;
 			}
 		}
 		System.out.println("\n");
-		for (int i = 0; i < array_one.length; i++) {			
+		for (int i = 0; i < array_one.length; i++) {
 			System.out.println("Array 2 :: " + array_two[i]);
 		}
 		read.close();
 	}
-	public static void markNine(){
-		int array[] = new int[3];		
-		
-		for(int i :array) {
+
+	public static void markNine() {
+		int array[] = new int[3];
+
+		for (int i : array) {
 			System.out.println("valor do  i == " + i);
 			System.out.println("valor do  array == " + array);
-			System.out.println("valor do  array[i] == " + array[i]);						
+			System.out.println("valor do  array[i] == " + array[i]);
 		}
 	}
 
@@ -179,6 +179,6 @@ public class array {
 		// markSix();
 		// markSeven();
 		markEight();
-		//markNine();
+		// markNine();
 	}
 }
