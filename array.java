@@ -83,7 +83,7 @@ public class array {
 
 	public static void markSix() {
 		int len, lpar = 0, limpar = 0, menor = 0, maior = 0;
-		double media = 0,soma = 0;
+		double media = 0, soma = 0;
 		Scanner read = new Scanner(System.in);
 
 		System.out.print("Informe a quantidade de valores que deseja ler :: ");
@@ -129,6 +129,23 @@ public class array {
 		System.out.println("Valor de array menor :: " + menor);
 
 	}
+	public static void markSeven() {
+		
+	}
+
+	public static void markEight() {
+		int len = 0, array[] = new int[len];
+		
+		Scanner read = new Scanner(System.in);
+		
+		System.out.println("Informe o tamanho do array");
+		len = read.nextInt();
+		
+		for(int i = 0; i <len;i++) {
+			System.out.println(" i == "+ i);
+		}
+		
+	}
 
 	public static void main(String[] args) {
 		// markOne();
@@ -136,6 +153,8 @@ public class array {
 		// markThree();
 		// markFour();
 		// markFive();
-		markSix();
+		//markSix();
+		//markSeven();
+		markEight();
 	}
 }
