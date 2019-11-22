@@ -170,6 +170,21 @@ public class array {
 		}
 	}
 
+	public static void markTen() {
+		int leng = 7;
+		String[] week = new String[leng];
+		week[0] = "Sunday";
+		week[1] = "Monday";
+		week[2] = "Tuesday";
+		week[3] = "Wednesday";
+		week[4] = "Thursday";
+		week[5] = "Friday";
+		week[6] = "Saturday";
+		for (String i : week) {
+			System.out.println("dias da semana :: " + i);
+		}
+	}
+
 	public static void main(String[] args) {
 		// markOne();
 		// markTwo();
@@ -178,7 +193,8 @@ public class array {
 		// markFive();
 		// markSix();
 		// markSeven();
-		markEight();
+		// markEight();
 		// markNine();
+		markTen();
 	}
 }
