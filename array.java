@@ -31,6 +31,7 @@ public class array {
 		for (int i = 0; i <= 2; i++) {
 			System.out.println("Valor do array " + i + " ==  " + array[i]);
 		}
+		read.close();
 	}
 
 	public static void markThree() {
@@ -47,6 +48,7 @@ public class array {
 
 			System.out.println("Valor do array " + i + " ==  " + array[i]);
 		}
+		read.close();
 	}
 
 	public static void markFour() {
@@ -61,7 +63,7 @@ public class array {
 			soma = soma + array[i];
 		}
 		System.out.println("Soma total array :: " + soma);
-
+		read.close();
 	}
 
 	public static void markFive() {
@@ -79,6 +81,7 @@ public class array {
 		for (int i = 0; i < len; i++) {
 			System.out.println("Indice :: " + i + " valor  " + array[i]);
 		}
+		read.close();
 	}
 
 	public static void markSix() {
@@ -127,7 +130,7 @@ public class array {
 		System.out.println("Quantidade de numeros impares :: " + limpar);
 		System.out.println("Valor de array maior :: " + maior);
 		System.out.println("Valor de array menor :: " + menor);
-
+		read.close();
 	}
 
 	public static void markSeven() {
@@ -159,6 +162,7 @@ public class array {
 			System.out.println("Array 1 :: " + array_one[i]);
 			System.out.println("Array 2 :: " + array_two[i]);
 		}
+	read.close();
 	}
 
 	public static void main(String[] args) {
