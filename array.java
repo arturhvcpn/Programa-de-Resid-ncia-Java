@@ -129,22 +129,34 @@ public class array {
 		System.out.println("Valor de array menor :: " + menor);
 
 	}
+
 	public static void markSeven() {
-		
+
 	}
 
 	public static void markEight() {
-		int len = 0, array[] = new int[len];
-		
+		int array_one[] = new int[5], array_two[] = new int[5];
+		// par * 2; impar + 5;
 		Scanner read = new Scanner(System.in);
-		
-		System.out.println("Informe o tamanho do array");
-		len = read.nextInt();
-		
-		for(int i = 0; i <len;i++) {
-			System.out.println(" i == "+ i);
+		for (int i = 0; i < 5; i++) {
+			System.out.print("\nInforme o valor do array 1 :: ");
+			array_one[i] = read.nextInt();
+			System.out.print("Informe o valor do array 2 :: ");
+			array_two[i] = read.nextInt();
+			// ||
+			if (array_one[i] % 2 == 0 || array_two[i] % 2 == 0) {
+
+				array_one[i] = array_one[i] * 2;
+				array_two[i] = array_two[i] * 2;
+			} else {
+				array_one[i] = array_one[i] + 5;
+				array_two[i] = array_two[i] + 5;
+			}
 		}
-		
+		for (int i = 0; i < 5; i++) {
+			System.out.println("Array 1 :: " + array_one);
+			System.out.println("Array 2 :: " + array_two);
+		}
 	}
 
 	public static void main(String[] args) {
@@ -153,8 +165,8 @@ public class array {
 		// markThree();
 		// markFour();
 		// markFive();
-		//markSix();
-		//markSeven();
+		// markSix();
+		// markSeven();
 		markEight();
 	}
 }
