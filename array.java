@@ -97,10 +97,13 @@ public class array {
 			if (i == 0) {
 				maior = array[i];
 				menor = array[i];
-			} else if (array[i] > maior) {
+			}
+			else { 
+				if (array[i] > maior) {
 				maior = array[i];
 			} else if (array[i] < menor) {
 				menor = array[i];
+			}
 			}
 			// soma
 			soma = soma + array[i];
@@ -117,11 +120,13 @@ public class array {
 			}
 
 		}
-
-		System.out.println("Valor da soma de todos os arrays ::" + soma);
-		System.out.println("Valor da média de todos os arrays ::" + media);
+		System.out.println("\n==============================================");
+		System.out.println("Valor da soma de todos os arrays :: " + soma);
+		System.out.println("Valor da média de todos os arrays :: " + media);
 		System.out.println("Quantidade de numeros pares :: " + lpar);
 		System.out.println("Quantidade de numeros impares :: " + limpar);
+		System.out.println("Valor de array maior :: " + maior);
+		System.out.println("Valor de array menor :: " + menor);
 
 	}
 
