@@ -1,2 +1,2 @@
-# Programa-de-Residê-ncia-Java
+# Programa de Residência Java
 Exercícios de Java 
