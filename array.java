@@ -82,7 +82,8 @@ public class array {
 	}
 
 	public static void markSix() {
-		int len, lpar = 0, limpar = 0, soma = 0, media = 0, menor = 0, maior = 0;
+		int len, lpar = 0, limpar = 0, menor = 0, maior = 0;
+		double media = 0,soma = 0;
 		Scanner read = new Scanner(System.in);
 
 		System.out.print("Informe a quantidade de valores que deseja ler :: ");
@@ -97,13 +98,12 @@ public class array {
 			if (i == 0) {
 				maior = array[i];
 				menor = array[i];
-			}
-			else { 
+			} else {
 				if (array[i] > maior) {
-				maior = array[i];
-			} else if (array[i] < menor) {
-				menor = array[i];
-			}
+					maior = array[i];
+				} else if (array[i] < menor) {
+					menor = array[i];
+				}
 			}
 			// soma
 			soma = soma + array[i];
