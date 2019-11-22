@@ -137,7 +137,9 @@ public class array {
 	public static void markEight() {
 		int array_one[] = new int[5], array_two[] = new int[5];
 		// par * 2; impar + 5;
+		
 		Scanner read = new Scanner(System.in);
+		
 		for (int i = 0; i < 5; i++) {
 			System.out.print("\nInforme o valor do array 1 :: ");
 			array_one[i] = read.nextInt();
@@ -154,8 +156,8 @@ public class array {
 			}
 		}
 		for (int i = 0; i < 5; i++) {
-			System.out.println("Array 1 :: " + array_one);
-			System.out.println("Array 2 :: " + array_two);
+			System.out.println("Array 1 :: " + array_one[i]);
+			System.out.println("Array 2 :: " + array_two[i]);
 		}
 	}
 
