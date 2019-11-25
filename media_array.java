@@ -23,19 +23,20 @@ public class Main {
             A2VA[i] = read.nextDouble();
 
             AMedia[i] = (A1VA[i] + A2VA[i]) / 2;
+
             if (AMedia[i] >= 7){
                 ASituacao[i] = "Aprovado";
             }
-            else if(AMedia[i] < 7){
+            else{
                 ASituacao[i] = "Reprovado";
             }
         }
         for (int i = 0;i<ANome.length; i++) {
-            if (AMedia[i] >= 7 && AMedia[i] <= 10){
+            if (AMedia[i] >= 7){
                 System.out.println("Nota == " + AMedia[i]);
                 System.out.println(ASituacao[i]);
             }
-            else if (AMedia[i] < 7 && AMedia[i] <= 0){
+            else if (AMedia[i] < 7){
                 System.out.println("Nota == " + AMedia[i]);
                 System.out.println(ASituacao[i]);
             }
