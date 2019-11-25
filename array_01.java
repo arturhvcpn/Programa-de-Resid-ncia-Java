@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Main {
     public static void markOne(){
@@ -42,7 +43,32 @@ public class Main {
             }
         }
     }
+    public static void markTwo(){
+        String var[] = {"Caderno","Lápis","Borracha","Outros", "Sair"};
+        int ind = 0;
+do {
+    ind = JOptionPane.showOptionDialog(null,"Escolha uma opcao ", "Menu de Opcoes", JOptionPane.DEFAULT_OPTION,JOptionPane.INFORMATION_MESSAGE,null,var,var[0]);
+    switch (ind){
+        case 0:
+            JOptionPane.showMessageDialog(null,"Caderno");
+            break;
+        case 1:
+            JOptionPane.showMessageDialog(null,"Lápis");
+            break;
+        case 2:
+            JOptionPane.showMessageDialog(null,"Borracha");
+            break;
+        case 3:
+            JOptionPane.showMessageDialog(null,"Outros");
+            break;
+        case 4:
+            break;
+    }
+}while (ind != 4);
+    }
+
     public static void main(String[] args) {
-    markOne();
+        //markOne();
+        markTwo();
     }
 }
