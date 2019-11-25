@@ -67,8 +67,20 @@ do {
 }while (ind != 4);
     }
 
+    public static void markThree(){
+        int range = 2;
+        int array_bi[][] = new int[range][range];
+
+        for(int i = 0; i < range; i++){
+            for (int it = 0; it < range; it++){
+                System.out.print(array_bi[i][it] +" ");
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         //markOne();
-        markTwo();
+        //markTwo();
+        markThree();
     }
 }
