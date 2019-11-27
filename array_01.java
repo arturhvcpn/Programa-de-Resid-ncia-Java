@@ -198,8 +198,7 @@ public static  void markNine(){
         for(int it = 0; i< range_two; it++){
             System.out.print("Informe o valor  da posicao ::  " + i + "  coluna :: " + it );
             array_bi[i][it] = read.nextInt();
-            //raiz = array_bi[i][it]*array_bi[i][it];
-            //System.out.print(Math.sqrt(raiz));
+
         }
     }
     read.close();
