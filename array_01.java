@@ -1,5 +1,8 @@
 package com.company;
 
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+import org.w3c.dom.ranges.RangeException;
+
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
@@ -79,7 +82,7 @@ do {
         }
     }
     public static void markFour(){
-        int range = 3;
+        int range = 100;
         int array_bi[][] = new int[range][range];
 
         for(int i = 0; i < range ;i++){
@@ -96,13 +99,36 @@ do {
             }
             System.out.println();
         }
-
-
     }
+public static void markFive(){
+
+
+        Scanner read = new Scanner(System.in);
+
+       System.out.print("Informe o tamanho da matriz :: ");
+       int range = read.nextInt();
+        int array_bi[][]= new int[range][range];
+
+        for(int i = 0; i < range; i++){
+            for (int it=0; it<range; it++){
+                if (i!=it){
+                    array_bi[i][it] = 0;
+                    System.out.print(array_bi[i][it] + " ");
+                }
+                else{
+                    array_bi[i][it] = 1;
+                    System.out.print(array_bi[i][it] + " ");
+                }
+            }
+            System.out.println();
+        }
+        read.close();
+}
     public static void main(String[] args) {
         //markOne();
         //markTwo();
         //markThree();
-        markFour();
+        //markFour();
+        markFive();
     }
 }
