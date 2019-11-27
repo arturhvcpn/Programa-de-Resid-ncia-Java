@@ -145,12 +145,56 @@ do {
             System.out.println();
         }
 }
+    public static void markSeven(){
+        int range = 3;
+        int array_bi[][] = new int [range][range];
+        // Desenhando um X com um array bidimensional
+        for (int i = 0; i<range; i++){
+            for (int it = 0; it< range; it++){
+                if(i!=it){
+                    array_bi[i][it] = 0;
+                    System.out.print(" ");
+                }
+                else{
+                    array_bi[i][it] = 1;
+                    System.out.print(array_bi[i][it] + " ");
+                }
+            }
+            System.out.println();
+        }
+}
+    public static void markEight(){
+    int range = 2, p1 = 0,p2 = 0;
+    int array_bi[][] = new int[range][range];
+        Scanner read = new Scanner(System.in);
+    // brincando
+    for (int i =0; i < range; i++){
+            for (int it = 0; it < range;it++){
+                for(int ith = 0; ith < range; ith++){
+                    System.out.println("Informe o valor da matriz :: " + it + "  value :: " + ith);
+                    array_bi[it][ith] = read.nextInt();
+                    p1 = array_bi[it][ith] * array_bi[it][ith];
+                    System.out.println(p1);
+                }
+            }
+    }
+
+/*    for (int is = 0; is<range;is++){
+        for (int its = 0; its<range;its++){
+            System.out.print(array_bi[i][it] + " ");
+        }
+        System.out.println();
+    }*/
+        read.close();
+}
     public static void main(String[] args) {
         //markOne();
         //markTwo();
         //markThree();
         //markFour();
         //markFive();
-        markSix();
+        //markSix();
+        //markSeven();
+        markEight();
     }
 }
