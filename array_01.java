@@ -2,7 +2,7 @@ package com.company;
 
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 import org.w3c.dom.ranges.RangeException;
-
+import java.math.*;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
@@ -69,7 +69,6 @@ do {
     }
 }while (ind != 4);
     }
-
     public static void markThree(){
         int range = 2;
         int array_bi[][] = new int[range][range];
@@ -124,7 +123,7 @@ do {
         }
         read.close();
 }
-    public static void  markSix(){
+    public static void markSix(){
         int range = 5;
         int array_bi[][] = new int[range][range];
         for(int i = 0; i <range; i++){
@@ -187,6 +186,24 @@ do {
     }*/
         read.close();
 }
+
+public static  void markNine(){
+    int range_one = 6, range_two = 2;
+    int array_bi[][] = new int[range_one][range_two];
+    double array[] = new double[range_one];
+
+    Scanner read = new Scanner(System.in);
+
+    for (int i = 0; i<range_one;i++){
+        for(int it = 0; i< range_two; it++){
+            System.out.print("Informe o valor  da posicao ::  " + i + "  coluna :: " + it );
+            array_bi[i][it] = read.nextInt();
+            //raiz = array_bi[i][it]*array_bi[i][it];
+            //System.out.print(Math.sqrt(raiz));
+        }
+    }
+    read.close();
+    }
     public static void main(String[] args) {
         //markOne();
         //markTwo();
@@ -195,6 +212,7 @@ do {
         //markFive();
         //markSix();
         //markSeven();
-        markEight();
+        //markEight();
+        markNine();
     }
 }
