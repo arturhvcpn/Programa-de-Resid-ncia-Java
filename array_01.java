@@ -78,9 +78,31 @@ do {
             System.out.println();
         }
     }
+    public static void markFour(){
+        int range = 3;
+        int array_bi[][] = new int[range][range];
+
+        for(int i = 0; i < range ;i++){
+            for (int it = 0; it<range;it++){
+
+                if (i!=it){
+                    array_bi[i][it] = 0;
+                    System.out.print(array_bi[i][it] + " ");
+                }
+                else{
+                    array_bi[i][it] = 1;
+                    System.out.print(array_bi[i][it] + " ");
+                }
+            }
+            System.out.println();
+        }
+
+
+    }
     public static void main(String[] args) {
         //markOne();
         //markTwo();
-        markThree();
+        //markThree();
+        markFour();
     }
 }
