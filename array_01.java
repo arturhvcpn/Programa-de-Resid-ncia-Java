@@ -212,6 +212,24 @@ do {
     }
     read.close();
     }
+    public static void markTen(){
+        int a = 10;
+        int b =20;
+        int soma = a+b;
+        System.out.println(soma);
+    }
+    public static int soma(int x, int y){
+        return x + y;
+    }
+    public static int subtracao(int x,int y){
+        return x - y;
+    }
+    public static int multiplicar(int x , int y){
+        return x * y;
+    }
+    public static int dividir(int x, int y){
+        return x / y;
+    }
     public static void main(String[] args) {
         //markOne();
         //markTwo();
@@ -221,6 +239,41 @@ do {
         //markSix();
         //markSeven();
         //markEight();
-        markNine();
+        //markNine();
+        //soma();
+        //markTen();
+
+        int x,y, conti;
+        char escolha;
+
+        Scanner read = new Scanner(System.in);
+        Main calculadora = new Main();
+
+       do {
+           System.out.print("Deseja utilizar a calculadora digite 1 para sair ou qualquer outro numero para continuar :: ");
+           conti = read.nextInt();
+           System.out.print("Informe um valor :: ");
+           x = read.nextInt();
+           System.out.print("Informe um valor :: ");
+           y = read.nextInt();
+           System.out.print("Informe que tipo de operacao  + - * /");
+           escolha = read.next().charAt(0);
+
+           switch (escolha){
+               case '+':
+                   System.out.printf("Resultado da soma foi :: ", calculadora.soma(x,y));
+                   break;
+               case '-':
+                   System.out.printf("Resultado da subtracao foi :: ", calculadora.subtracao(x,y));
+                   break;
+               case  '*':
+                   System.out.printf("Resultado da multiplicacao foi :: ", calculadora.multiplicar(x,y));
+                   break;
+               case '/':
+                   System.out.printf("Resultado da divisao foi :: ", calculadora.dividir(x,y));
+
+           }
+           }while (conti!=1);
+        read.close();
     }
 }
