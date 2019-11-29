@@ -1,8 +1,5 @@
 package com.company;
 
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-import org.w3c.dom.ranges.RangeException;
-import java.math.*;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
@@ -230,7 +227,7 @@ do {
     public static int dividir(int x, int y){
         return x / y;
     }
-    public static  void delta(){
+    public static double delta(){
         double delta,a,b,c;
         Scanner read = new Scanner(System.in);
         System.out.println("Valor de A :: ");
@@ -240,10 +237,12 @@ do {
         System.out.println("Valor de C :: ");
         c = read.nextDouble();
         delta = (b*b)- 4*a*c;
-        System.out.println("Valor de delta :: " + delta);
+        return (delta);
     }
     public static void main(String[] args) {
-delta();
+
+        double d = delta();
+        System.out.println(d);
         /*
         int x , y , conti;
         char escolha;
