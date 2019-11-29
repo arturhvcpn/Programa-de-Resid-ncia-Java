@@ -230,8 +230,21 @@ do {
     public static int dividir(int x, int y){
         return x / y;
     }
+    public static  void delta(){
+        double delta,a,b,c;
+        Scanner read = new Scanner(System.in);
+        System.out.println("Valor de A :: ");
+        a = read.nextDouble();
+        System.out.println("Valor de B :: ");
+        b = read.nextDouble();
+        System.out.println("Valor de C :: ");
+        c = read.nextDouble();
+        delta = (b*b)- 4*a*c;
+        System.out.println("Valor de delta :: " + delta);
+    }
     public static void main(String[] args) {
-
+delta();
+        /*
         int x , y , conti;
         char escolha;
 
@@ -267,6 +280,6 @@ do {
                    break;
            }
        }while(conti != 1);
-        read.close();
+        read.close();*/
     }
 }
