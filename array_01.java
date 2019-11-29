@@ -243,7 +243,7 @@ do {
         //soma();
         //markTen();
 
-        int x,y, conti;
+        int x , y , conti;
         char escolha;
 
         Scanner read = new Scanner(System.in);
@@ -251,30 +251,32 @@ do {
 
         System.out.print("Deseja utilizar a calculadora digite 1 para sair ou qualquer outro numero para continuar :: ");
         conti = read.nextInt();
-       do {
-
-           System.out.print("Informe um valor :: ");
+       while(conti != 1) {
+           System.out.print("\nInforme um valor :: ");
            x = read.nextInt();
-           System.out.print("Informe um valor :: ");
+           System.out.print("\nInforme um valor :: ");
            y = read.nextInt();
-           System.out.print("Informe que tipo de operacao  + - * /");
+           System.out.print("\nInforme que tipo de operacao  +  -  *  /  ");
            escolha = read.next().charAt(0);
 
-           switch (escolha){
+           switch (escolha) {
                case '+':
-                   System.out.printf("Resultado da soma foi :: ", calculadora.soma(x,y));
+                   System.out.printf("Resultado da soma foi :: ", calculadora.soma(x, y));
                    break;
                case '-':
-                   System.out.printf("Resultado da subtracao foi :: ", calculadora.subtracao(x,y));
+                   System.out.printf("Resultado da subtracao foi :: ", calculadora.subtracao(x, y));
                    break;
-               case  '*':
-                   System.out.printf("Resultado da multiplicacao foi :: ", calculadora.multiplicar(x,y));
+               case '*':
+                   System.out.printf("Resultado da multiplicacao foi :: ", calculadora.multiplicar(x, y));
                    break;
                case '/':
-                   System.out.printf("Resultado da divisao foi :: ", calculadora.dividir(x,y));
-
+                   System.out.printf("Resultado da divisao foi :: ", calculadora.dividir(x, y));
+               break;
+               default:
+                   System.out.println("Operação inválida");
+                   break;
            }
-           }while (conti!=1);
+       }
         read.close();
     }
 }
