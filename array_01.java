@@ -249,9 +249,10 @@ do {
         Scanner read = new Scanner(System.in);
         Main calculadora = new Main();
 
+        System.out.print("Deseja utilizar a calculadora digite 1 para sair ou qualquer outro numero para continuar :: ");
+        conti = read.nextInt();
        do {
-           System.out.print("Deseja utilizar a calculadora digite 1 para sair ou qualquer outro numero para continuar :: ");
-           conti = read.nextInt();
+
            System.out.print("Informe um valor :: ");
            x = read.nextInt();
            System.out.print("Informe um valor :: ");
