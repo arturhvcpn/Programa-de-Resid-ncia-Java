@@ -202,7 +202,7 @@ do {
     }
     for(int i = 0; i< range_one;i++){
         for (int it = 0; i < range_two; it++){
-            array[i] = array_bi[i][it] * array_bi[i][it+1];
+            array[i] = Math.sqrt(array_bi[i][it] * array_bi[i][it+1]);
             it++;
         }
     }
