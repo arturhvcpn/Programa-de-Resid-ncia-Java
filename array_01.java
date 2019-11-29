@@ -187,7 +187,7 @@ do {
         read.close();
 }
 
-public static  void markNine(){
+    public static  void markNine(){
     int range_one = 6, range_two = 2;
     int array_bi[][] = new int[range_one][range_two];
     double array[] = new double[range_one];
@@ -198,8 +198,17 @@ public static  void markNine(){
         for(int it = 0; i< range_two; it++){
             System.out.print("Informe o valor  da posicao ::  " + i + "  coluna :: " + it );
             array_bi[i][it] = read.nextInt();
-
         }
+    }
+    for(int i = 0; i< range_one;i++){
+        for (int it = 0; i < range_two; it++){
+            array[i] = array_bi[i][it] * array_bi[i][it+1];
+            it++;
+        }
+    }
+    for(int i = 0; i<6;i++){
+        System.out.printf("%.2%n",array[i]);
+        System.out.println();
     }
     read.close();
     }
