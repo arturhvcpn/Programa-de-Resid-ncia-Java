@@ -251,16 +251,16 @@ do {
 
            switch (escolha) {
                case '+':
-                   System.out.printf("Resultado da soma foi :: ", calculadora.soma(x, y));
+                   System.out.println("Resultado da soma foi :: "+ calculadora.soma(x, y));
                    break;
                case '-':
-                   System.out.printf("Resultado da subtracao foi :: ", calculadora.subtracao(x, y));
+                   System.out.println("Resultado da subtracao foi :: "+ calculadora.subtracao(x, y));
                    break;
                case '*':
-                   System.out.printf("Resultado da multiplicacao foi :: ", calculadora.multiplicar(x, y));
+                   System.out.println("Resultado da multiplicacao foi :: "+ calculadora.multiplicar(x, y));
                    break;
                case '/':
-                   System.out.printf("Resultado da divisao foi :: ", calculadora.dividir(x, y));
+                   System.out.println("Resultado da divisao foi :: "+ calculadora.dividir(x, y));
                break;
                default:
                    System.out.println("Operação inválida");
