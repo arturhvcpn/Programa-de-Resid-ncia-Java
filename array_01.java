@@ -231,17 +231,6 @@ do {
         return x / y;
     }
     public static void main(String[] args) {
-        //markOne();
-        //markTwo();
-        //markThree();
-        //markFour();
-        //markFive();
-        //markSix();
-        //markSeven();
-        //markEight();
-        //markNine();
-        //soma();
-        //markTen();
 
         int x , y , conti;
         char escolha;
@@ -249,9 +238,10 @@ do {
         Scanner read = new Scanner(System.in);
         Main calculadora = new Main();
 
-        System.out.print("Deseja utilizar a calculadora digite 1 para sair ou qualquer outro numero para continuar :: ");
-        conti = read.nextInt();
-       while(conti != 1) {
+
+       do {
+           System.out.print("\nDeseja utilizar a calculadora digite 1 para sair ou qualquer outro numero para continuar :: ");
+           conti = read.nextInt();
            System.out.print("\nInforme um valor :: ");
            x = read.nextInt();
            System.out.print("\nInforme um valor :: ");
@@ -276,7 +266,7 @@ do {
                    System.out.println("Operação inválida");
                    break;
            }
-       }
+       }while(conti != 1);
         read.close();
     }
 }
