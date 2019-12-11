@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Venda {
 
     private int numero;
-    private  String nomeMae;
+    private String nomeMae;
     private int pontos;
 
     public Venda(int numero, String nomeMae,int pontos){
