@@ -8,13 +8,23 @@ public class Reserva {
 
     private int numeroQuarto;
     private Date checkIn, checkOut;
-        //construtor
-    public Reserva(int numeroQuarto,Date checkIn,Date checkOut){
+    private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+    
+    //construtor
+    public Reserva(int numeroQuarto, Date checkIn, Date checkOut){
         this.numeroQuarto = numeroQuarto;
         this.checkOut = checkOut;
         this.checkIn = checkIn;
     }
-    private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+    public void atualizarDatas(Date checkIn, Date checkOut){
+        this.checkIn = checkIn;
+        this.checkOut = checkOut;
+    }
+    public long duracao(){
+        long tempo = checkIn.getTime() - checkOut.getTime();
+        long resultado = (TimeUnit.DAYS.convert(tempo,TimeUnit.MILLISECONDS));
+        return resultado;
+    }
         // get
     public Date getCheckIn() {
         return checkIn;
