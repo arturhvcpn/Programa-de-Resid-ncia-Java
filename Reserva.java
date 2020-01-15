@@ -9,7 +9,7 @@ public class Reserva {
     private int numeroQuarto;
     private Date checkIn, checkOut;
     private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-    
+
     //construtor
     public Reserva(int numeroQuarto, Date checkIn, Date checkOut){
         this.numeroQuarto = numeroQuarto;
@@ -49,7 +49,7 @@ public class Reserva {
                 " Reserva: Quarto " + sdf.format(getNumeroQuarto()) +
                 ", Check in " + sdf.format(getCheckIn()) +
                 ", Check out "+ sdf.format(getCheckOut()) +
-                ", "+
+                ", "+ duracao() +
                 "noites";
     }
 }
