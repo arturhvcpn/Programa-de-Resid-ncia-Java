@@ -23,8 +23,13 @@ public class principalReserva {
             Date dateCheckOut = sdf.parse(read.next());
 
             Reserva foo = new Reserva(number,dateCheckIn,dateCheckOut);
+            String att = foo.atualizarDatas(dateCheckIn,dateCheckOut);
 
-            System.out.println(foo.toString());
+            if (att != null ){
+                System.out.println("Erro na Reserva" + att);
+            }else{
+                System.out.println("Reserva: " + foo);
+            }
 
             System.out.println("\nInforme as datas para atualização:");
 
