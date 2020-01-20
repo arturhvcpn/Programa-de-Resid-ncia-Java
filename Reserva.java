@@ -17,9 +17,19 @@ public class Reserva {
         this.checkIn = checkIn;
     }
 
-    public void atualizarDatas(Date checkIn, Date checkOut){
+    public String atualizarDatas(Date checkIn, Date checkOut){
         this.checkIn = checkIn;
         this.checkOut = checkOut;
+        
+        if(!checkOut.after(checkIn)){
+            return "Erro data informada posterior a data de hoje";
+        }else if (checkIn.before(new Date()) || checkOut.before(new Date())){
+            return "Erro: as datas devem ser futuras";
+        }
+        else{
+            System.out.println(toString());
+        }
+        return null;
     }
     public long duracao(){
         long tempo =  checkOut.getTime() - checkIn.getTime();
@@ -39,27 +49,7 @@ public class Reserva {
     public void setNumeroQuarto(int numeroQuarto) {
         this.numeroQuarto = numeroQuarto;
     }
-
-    public boolean setCheckIn(Date checkIn){
-            this.checkIn = checkIn;
-            if(checkIn.before(new Date())){
-                System.out.println("Erro: as datas devem ser futuras");
-            }else{
-                System.out.println(toString());
-            }
-            return true;
-    }
-
-    public boolean setCheckOut(Date checkOut) {
-        this.checkOut = checkOut;
-        if(!checkOut.after(checkIn)){
-           System.out.println("Erro data informada posterior a data de hoje");
-        }else{
-            System.out.println(toString());
-        }
-        return true;
-    }
-
+    
     @Override
     public String toString() {
         return  "\nReserva" +
