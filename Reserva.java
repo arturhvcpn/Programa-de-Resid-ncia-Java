@@ -20,10 +20,11 @@ public class Reserva {
     public String atualizarDatas(Date checkIn, Date checkOut){
         this.checkIn = checkIn;
         this.checkOut = checkOut;
-        
+
         if(!checkOut.after(checkIn)){
             return "Erro data informada posterior a data de hoje";
-        }else if (checkIn.before(new Date()) || checkOut.before(new Date())){
+        }
+        if (checkIn.before(new Date()) || checkOut.before(new Date())){
             return "Erro: as datas devem ser futuras";
         }
         else{
@@ -49,7 +50,7 @@ public class Reserva {
     public void setNumeroQuarto(int numeroQuarto) {
         this.numeroQuarto = numeroQuarto;
     }
-    
+
     @Override
     public String toString() {
         return  "\nReserva" +
