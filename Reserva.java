@@ -18,19 +18,19 @@ public class Reserva {
     }
 
     public String atualizarDatas(Date checkIn, Date checkOut){
-        
+
         if(!checkOut.after(checkIn)){
-            return "Erro data informada posterior a data de hoje";
+            return "\nErro data informada posterior a data de hoje";
         }
         if (checkIn.before(new Date()) || checkOut.before(new Date())){
-            return "Erro: as datas devem ser futuras";
+            return "\nErro: as datas devem ser futuras";
         }
         else{
             System.out.println(toString());
         }
         this.checkIn = checkIn;
         this.checkOut = checkOut;
-        
+
         return null;
     }
     public long duracao(){
