@@ -18,9 +18,7 @@ public class Reserva {
     }
 
     public String atualizarDatas(Date checkIn, Date checkOut){
-        this.checkIn = checkIn;
-        this.checkOut = checkOut;
-
+        
         if(!checkOut.after(checkIn)){
             return "Erro data informada posterior a data de hoje";
         }
@@ -30,6 +28,9 @@ public class Reserva {
         else{
             System.out.println(toString());
         }
+        this.checkIn = checkIn;
+        this.checkOut = checkOut;
+        
         return null;
     }
     public long duracao(){
